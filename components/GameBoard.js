@@ -8,7 +8,7 @@ const GameBoard = () => {
   const [cards, setCards] = useState(shuffle(initialCards));
   const [flippedCards, setFlippedCards] = useState([]);
   const [matchedCards, setMatchedCards] = useState([]);
-  const [time, setTime] = useState(60); // Set countdown timer (e.g., 60 seconds)
+  const [time, setTime] = useState(180); 
   const [gameOver, setGameOver] = useState(false);
   const [initial, setInitial] = useState(true);
 
