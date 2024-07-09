@@ -1,0 +1,52 @@
+.card {
+  width: 100px;
+  height: 150px;
+  perspective: 1000px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.cardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s, box-shadow 0.3s;
+  transform-style: preserve-3d;
+}
+
+.flipped {
+  transform: rotateY(180deg);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.cardFront, .cardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  border: 2px solid transparent;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.cardFront {
+  background: linear-gradient(135deg, #4e73df, #1e3a8a);
+}
+
+.cardBack {
+  background: linear-gradient(135deg, #f8f9fc, #d1d5db);
+  transform: rotateY(180deg);
+  color: #4e73df;
+}
+
+.matched .cardBack {
+  background: linear-gradient(135deg, #28a745, #155724);
+  color: #fff;
+  border-color: #28a745;
+}

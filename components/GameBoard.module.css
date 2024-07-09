@@ -1,0 +1,58 @@
+.gameBoard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  justify-items: center;
+  padding: 20px;
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: #f8f8f8;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.timer {
+  font-size: 28px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+}
+
+.gameOver {
+  font-size: 32px;
+  color: red;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .gameBoard {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .card {
+    width: 80px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .gameBoard {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card {
+    width: 70px;
+    height: 105px;
+  }
+
+  .timer {
+    font-size: 22px;
+  }
+
+  .gameOver {
+    font-size: 26px;
+  }
+}
